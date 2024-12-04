@@ -1,26 +1,35 @@
 # To-Do List
 
+---
+
 Este é um aplicativo de lista de tarefas simples desenvolvido com React Native e Expo.
 
 O objetivo do projeto é criar uma interface que exiba cartões de tarefas, permitindo que o usuário adicione, visualize e gerencie as tarefas em uma lista interativa.
 
 O projeto usa vários recursos do React Native, como componentes, estados e props. O estilo é feito com módulos CSS.
 
-## Sumário
-
-- [Sobre](#sobre)
-- [Tecnologias Usadas](#tecnologias-usadas)
-- [Instalação](#instalação)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Licença](#licença)
+> [!summary] Sumário
+>
+> - [Sobre](#sobre)
+> - [Tecnologias Usadas](#tecnologias-usadas)
+> - [Instalação](#instalação)
+> - [Estrutura do Projeto](#estrutura-do-projeto)
+> - [Como Contribuir](#como-contribuir)
+> - [Licença](#licença)
 
 ## Sobre
+
+---
 
 O To-Do List permite ao usuário adicionar tarefas, marcar como concluídas e visualizar o total de tarefas pendentes. Ele utiliza componentes React Native modulares para facilitar a manutenção e o desenvolvimento do código.
 
 Este projeto foi criado como parte de um aprendizado prático de React Native, utilizando a componentização como principal técnica de organização.
 
+![[ToDO_List.png]]
+
 ## Tecnologias Usadas
+
+---
 
 - **React Native**: Framework utilizado para criar aplicativos móveis usando JavaScript.
 - **Expo**: Ferramenta para facilitar o desenvolvimento de aplicativos React Native.
@@ -28,6 +37,8 @@ Este projeto foi criado como parte de um aprendizado prático de React Native, u
 - **React**: Biblioteca JavaScript para a construção de interfaces de usuário.
 
 ## Instalação
+
+---
 
 Para iniciar este projeto localmente, siga as instruções abaixo:
 
@@ -69,6 +80,8 @@ Este comando iniciará o servidor do Expo no seu navegador, e você poderá esca
 
 ## Estrutura do Projeto
 
+---
+
 A estrutura do diretório está organizada da seguinte forma:
 
 ```
@@ -97,6 +110,8 @@ ToDo_List/
 
 ### Descrição das Pastas e Arquivos
 
+---
+
 - **`src/components/`**: Contém os componentes principais do aplicativo.
   - **`Card/`**: Componente para exibir tarefas.
   - **`Counter/`**: Componente para contar as tarefas pendentes.
@@ -107,6 +122,20 @@ ToDo_List/
 - **`App.js`**: Arquivo principal que importa e utiliza os componentes.
 - **`package.json`**: Contém as dependências e scripts do projeto.
 
+## Como Contribuir
+
+---
+
+Contribuições são bem-vindas! Sinta-se à vontade para criar um _pull request_ com suas melhorias ou correções. Se você deseja contribuir com este projeto, siga estas etapas:
+
+1. Faça um **_fork_** deste repositório.
+2. Crie uma **nova _branch_** para sua contribuição (`git checkout -b feature/nova-funcionalidade`).
+3. Faça suas alterações e **_commit_** (`git commit -am 'Adiciona nova funcionalidade'`).
+4. Envie sua _branch_ para o repositório remoto (`git push origin feature/nova-funcionalidade`).
+5. Abra um **_Pull Request_**.
+
 ## Licença
+
+---
 
 Este projeto está sob a [Licença MIT](https://chatgpt.com/c/LICENSE).
