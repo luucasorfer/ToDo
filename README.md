@@ -12,7 +12,6 @@ O projeto usa vários recursos do React Native, como componentes, estados e prop
 - [Tecnologias Usadas](#tecnologias-usadas)
 - [Instalação](#instalação)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [Como Contribuir](#como-contribuir)
 - [Licença](#licença)
 
 ## Sobre
