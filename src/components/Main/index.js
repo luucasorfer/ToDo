@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { View, Platform, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import Form from "../Form";
@@ -74,7 +75,7 @@ export default function Main() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    width: "100%",
+    width: Platform.OS === "web" ? "100%" : "80%", // Condicional baseado na plataforma
     maxWidth: 736,
     alignItems: "center",
   },

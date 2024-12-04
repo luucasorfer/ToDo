@@ -20,11 +20,12 @@ export default function Title() {
 
 const styles = StyleSheet.create({
   header: {
+    flex: 1,
+    width: "100%",
+    maxHeight: 200,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#0D0D0D",
-    height: 200,
-    width: "100%",
     paddingHorizontal: 20,
   },
 });

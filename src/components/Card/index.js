@@ -61,14 +61,14 @@ export default function TasksList({
                 item.estaConcluido && styles.tarefaConcluida,
               ]}
             >
-              {item.estaConcluido ? "✔️" : "⚪"} {item.text}
+              {item.estaConcluido ? "✔️  " : "⚪  "} {item.text}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.excluir}
             onPress={() => excluiTarefa(index)}
           >
-            <Text style={{ padding: 8 }}>❌</Text>
+            <Text style={{ padding: 8 }}> ❌ </Text>
           </TouchableOpacity>
         </View>
       )}
