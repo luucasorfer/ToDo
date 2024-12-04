@@ -38,15 +38,31 @@ export function EmptyList() {
   );
 }
 
-export default function TasksList({ listaTarefas }) {
+export default function TasksList({ listaTarefas, tarefaConcluida }) {
   return (
     <FlatList
       style={{ width: "90%", marginTop: 40 }}
       data={listaTarefas}
       renderItem={({ item, index }) => (
         <View style={styles.tarefaItem}>
-          <TouchableOpacity style={{ width: "95%", padding: 12 }}>
-            <Text style={[styles.tarefaTexto]}>{item.text}</Text>
+          <TouchableOpacity
+            style={{ width: "95%", padding: 12 }}
+            onPress={() => tarefaConcluida(index)}
+          >
+            <Text
+              style={[
+                styles.tarefaTexto,
+                item.estaConcluido && styles.tarefaConcluida,
+              ]}
+            >
+              {item.estaConcluido ? "✔️" : "⚪"} {item.text}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.excluir}
+            onPress={() => removeTask(item.id)}
+          >
+            <Text style={{ padding: 8 }}>❌</Text>
           </TouchableOpacity>
         </View>
       )}

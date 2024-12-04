@@ -12,11 +12,20 @@ export default function Main() {
     setListaTarefas([...listaTarefas, { text: tarefa, estaConcluido: false }]);
   };
 
+  const alteraConcluido = (index) => {
+    const atualizaTarefa = [...listaTarefas];
+    atualizaTarefa[index].estaConcluido = !atualizaTarefa[index].estaConcluido;
+    setListaTarefas(atualizaTarefa);
+  };
+
   return (
     <View style={styles.mainContainer}>
       <Form enviaTarefa={addTarefas} />
-      <Counter />
-      <TasksList listaTarefas={listaTarefas} />
+      <Counter contTarefas={listaTarefas} />
+      <TasksList
+        listaTarefas={listaTarefas}
+        tarefaConcluida={alteraConcluido}
+      />
     </View>
   );
 }

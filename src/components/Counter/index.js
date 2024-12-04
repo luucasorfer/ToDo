@@ -1,17 +1,20 @@
 import { View, Text, StyleSheet } from "react-native";
 
-export default function Counter() {
+export default function Counter({ contTarefas }) {
+  const tarefasConcluidas = contTarefas.filter(
+    (tarefa) => tarefa.estaConcluido,
+  ).length;
   return (
     <View style={styles.tasksContainer}>
       <View style={styles.tasksContainerText}>
         <Text style={{ color: "#4EA8DE", fontWeight: "bold" }}>
           Tarefas criadas
         </Text>
-        <Text style={styles.tasksContainerCount}>0</Text>
+        <Text style={styles.tasksContainerCount}>{contTarefas.length}</Text>
       </View>
       <View style={styles.tasksContainerText}>
         <Text style={{ color: "#8284FA", fontWeight: "bold" }}>Concluído</Text>
-        <Text style={styles.tasksContainerCount}>0</Text>
+        <Text style={styles.tasksContainerCount}>{tarefasConcluidas}</Text>
       </View>
     </View>
   );
