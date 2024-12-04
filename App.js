@@ -1,11 +1,5 @@
-import {
-  View,
-  Text,
-  TextInput,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
-} from "react-native";
+import { View, StyleSheet } from "react-native";
+
 import Title from "./src/components/Title";
 import Main from "./src/components/Main";
 
