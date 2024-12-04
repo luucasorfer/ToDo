@@ -41,7 +41,7 @@ export function EmptyList() {
 export default function TasksList({ listaTarefas, tarefaConcluida }) {
   return (
     <FlatList
-      style={{ width: "90%", marginTop: 40 }}
+      style={{ width: "100%", marginTop: 2 }}
       data={listaTarefas}
       renderItem={({ item, index }) => (
         <View style={styles.tarefaItem}>
@@ -83,8 +83,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#262626",
     paddingHorizontal: 10,
+    paddingVertical: 4,
     marginVertical: 8,
+    borderWidth: 1,
     borderRadius: 8,
+    borderColor: "#333333",
   },
 
   tarefaTexto: {
