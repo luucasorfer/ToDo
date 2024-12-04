@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   View,
   Text,
@@ -7,15 +8,24 @@ import {
 } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-export default function Form() {
+export default function Form({ enviaTarefa }) {
+  const [tarefa, setTarefa] = useState("");
+
+  function enviaTexto() {
+    enviaTarefa(tarefa);
+    setTarefa("");
+  }
+
   return (
     <View style={styles.inputContainer}>
       <TextInput
         style={[styles.input, { fontWeight: "500" }]}
         placeholder="Adicione uma tarefa..."
         placeholderTextColor={"#808080"}
+        value={tarefa}
+        onChangeText={setTarefa}
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={enviaTexto}>
         <Text
           style={{
             color: "#F2F2F2",

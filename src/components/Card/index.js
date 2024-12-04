@@ -1,4 +1,11 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 
 import clipboard from "../../image/clipboard.png";
 
@@ -31,11 +38,20 @@ export function EmptyList() {
   );
 }
 
-export default function TasksList() {
+export default function TasksList({ listaTarefas }) {
   return (
-    <View style={{ width: "100%", alignItems: "center" }}>
-      <EmptyList />
-    </View>
+    <FlatList
+      style={{ width: "90%", marginTop: 40 }}
+      data={listaTarefas}
+      renderItem={({ item, index }) => (
+        <View style={styles.tarefaItem}>
+          <TouchableOpacity style={{ width: "95%", padding: 12 }}>
+            <Text style={[styles.tarefaTexto]}>{item.text}</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+      ListEmptyComponent={<EmptyList />}
+    />
   );
 }
 

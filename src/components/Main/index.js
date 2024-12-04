@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { View, StyleSheet } from "react-native";
 
 import Form from "../Form";
@@ -5,11 +6,17 @@ import Counter from "../Counter";
 import TasksList from "../Card";
 
 export default function Main() {
+  const [listaTarefas, setListaTarefas] = useState([]);
+
+  const addTarefas = (tarefa) => {
+    setListaTarefas([...listaTarefas, { text: tarefa, estaConcluido: false }]);
+  };
+
   return (
     <View style={styles.mainContainer}>
-      <Form />
+      <Form enviaTarefa={addTarefas} />
       <Counter />
-      <TasksList />
+      <TasksList listaTarefas={listaTarefas} />
     </View>
   );
 }
