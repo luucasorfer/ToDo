@@ -4,6 +4,7 @@ export default function Counter({ contTarefas }) {
   const tarefasConcluidas = contTarefas.filter(
     (tarefa) => tarefa.estaConcluido,
   ).length;
+
   return (
     <View style={styles.tasksContainer}>
       <View style={styles.tasksContainerText}>

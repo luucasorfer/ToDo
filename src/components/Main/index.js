@@ -32,6 +32,7 @@ export default function Main() {
 
 const styles = StyleSheet.create({
   mainContainer: {
+    flex: 1,
     width: "100%",
     maxWidth: 736,
     alignItems: "center",

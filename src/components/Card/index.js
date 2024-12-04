@@ -26,6 +26,7 @@ export function EmptyList() {
       </Text>
       <Text
         style={{
+          width: "50%",
           color: "#808080",
           textAlign: "center",
           fontWeight: "500",
@@ -41,8 +42,9 @@ export function EmptyList() {
 export default function TasksList({ listaTarefas, tarefaConcluida }) {
   return (
     <FlatList
-      style={{ width: "100%", marginTop: 2 }}
+      style={styles.flatList}
       data={listaTarefas}
+      showsVerticalScrollIndicator={false} // Remove a barra de rolagem
       renderItem={({ item, index }) => (
         <View style={styles.tarefaItem}>
           <TouchableOpacity
@@ -76,6 +78,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 80,
+  },
+
+  flatList: {
+    width: "100%",
+    marginTop: 2,
   },
 
   tarefaItem: {
