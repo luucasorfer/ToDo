@@ -17,6 +17,7 @@ export default function Main() {
 const styles = StyleSheet.create({
   mainContainer: {
     width: "100%",
+    maxWidth: 736,
     alignItems: "center",
   },
 });

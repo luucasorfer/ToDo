@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Form() {
   return (
@@ -19,11 +20,12 @@ export default function Form() {
           style={{
             color: "#F2F2F2",
             fontWeight: "bold",
-            fontSize: 16,
+            fontSize: 14,
           }}
         >
           Criar
         </Text>
+        <Ionicons name="add-circle-outline" size={16} color="#fff" />
       </TouchableOpacity>
     </View>
   );
@@ -34,8 +36,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     width: "100%",
-    gap: 10,
-    top: -30,
+    gap: 8,
+    top: -26,
     paddingHorizontal: 20,
   },
 
@@ -46,17 +48,17 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     color: "#F2F2F2",
     padding: 16,
-    width: "80%",
-    fontSize: 16,
+    width: "100%",
+    fontSize: 14,
   },
 
   button: {
     backgroundColor: "#1e6f9f",
     borderRadius: 8,
-    padding: 16,
+    paddingHorizontal: 22,
     flexDirection: "row",
     alignItems: "center",
-    gap: 5,
-    height: "100%",
+    justifyContent: "center",
+    gap: 8,
   },
 });

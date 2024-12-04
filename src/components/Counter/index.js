@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  TextInput,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
-} from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 export default function Counter() {
   return (
@@ -28,11 +21,13 @@ const styles = StyleSheet.create({
   tasksContainer: {
     borderBottomWidth: 1,
     borderBottomColor: "#333333",
-    width: "80%",
+    width: "100%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingVertical: 8,
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+    top: 15,
   },
 
   tasksContainerText: {
@@ -46,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "700",
     borderRadius: 10,
-    paddingVertical: 4,
+    paddingVertical: 2,
     paddingHorizontal: 8,
     marginLeft: 8,
   },

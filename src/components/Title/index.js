@@ -9,7 +9,7 @@ export default function Title() {
         source={logo}
         style={{
           paddingHorizontal: 100,
-          paddingVertical: 15,
+          paddingVertical: 18,
           aspectRatio: 1,
         }}
         resizeMode="contain"

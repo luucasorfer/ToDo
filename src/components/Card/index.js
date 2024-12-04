@@ -11,7 +11,7 @@ export function EmptyList() {
           color: "#808080",
           marginTop: 16,
           textAlign: "center",
-          fontWeight: "500",
+          fontWeight: "700",
           fontSize: 16,
         }}
       >
@@ -41,8 +41,32 @@ export default function TasksList() {
 
 const styles = StyleSheet.create({
   emptyList: {
-    width: "80%",
     alignItems: "center",
-    marginTop: 60,
+    justifyContent: "center",
+    marginTop: 80,
+  },
+
+  tarefaItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#262626",
+    paddingHorizontal: 10,
+    marginVertical: 8,
+    borderRadius: 8,
+  },
+
+  tarefaTexto: {
+    color: "#F2F2F2",
+    fontSize: 16,
+  },
+
+  tarefaConcluida: {
+    textDecorationLine: "line-through",
+    color: "#808080",
+    fontSize: 16,
+  },
+
+  excluir: {
+    marginLeft: "auto",
   },
 });
