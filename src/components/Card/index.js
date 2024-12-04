@@ -39,7 +39,11 @@ export function EmptyList() {
   );
 }
 
-export default function TasksList({ listaTarefas, tarefaConcluida }) {
+export default function TasksList({
+  listaTarefas,
+  tarefaConcluida,
+  excluiTarefa,
+}) {
   return (
     <FlatList
       style={styles.flatList}
@@ -62,7 +66,7 @@ export default function TasksList({ listaTarefas, tarefaConcluida }) {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.excluir}
-            onPress={() => removeTask(item.id)}
+            onPress={() => excluiTarefa(index)}
           >
             <Text style={{ padding: 8 }}>❌</Text>
           </TouchableOpacity>

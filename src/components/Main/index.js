@@ -18,6 +18,10 @@ export default function Main() {
     setListaTarefas(atualizaTarefa);
   };
 
+  const removeTarefa = (index) => {
+    setListaTarefas(listaTarefas.filter((_, indice) => indice !== index));
+  };
+
   return (
     <View style={styles.mainContainer}>
       <Form enviaTarefa={addTarefas} />
@@ -25,6 +29,7 @@ export default function Main() {
       <TasksList
         listaTarefas={listaTarefas}
         tarefaConcluida={alteraConcluido}
+        excluiTarefa={removeTarefa}
       />
     </View>
   );
