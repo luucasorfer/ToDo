@@ -12,9 +12,14 @@ export default function Form({ enviaTarefa }) {
   const [tarefa, setTarefa] = useState("");
 
   function enviaTexto() {
+    if (tarefa.trim() === "") {
+      alert("A tarefa não pode estar vazia!");
+      return;
+    }
     enviaTarefa(tarefa);
     setTarefa("");
   }
+  
 
   return (
     <View style={styles.inputContainer}>
